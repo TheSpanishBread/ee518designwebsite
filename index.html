@@ -24,15 +24,15 @@
     display: inline-block;
     position: relative;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border:2px solid #ddd; /* add border to the buttons */
     box-shadow: 0 3px 3px #999;
     padding: 0px;
     text-decoration: none;
     text-align: center;
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: normal;
     line-height: 2em;
     border-radius: 27px;
@@ -74,6 +74,9 @@
       border-color: #00ABE3;
 }
 /*******************************************************/
+html{
+    scroll-behavior: smooth;
+}
     body{
         margin: auto;
         background: #000000 url(asfalt-light.png);
@@ -105,13 +108,9 @@
         opacity: 0.9;
         z-index: 999;
     }
-    .logo{
-    }
     .logo img{
         width: 100px;
         height:100px;
-    }
-    nav{
     }
     header nav ul{
         display: flex;
@@ -195,7 +194,7 @@
             margin: auto;
             display: block;
         }
-        .div3{
+        #div3{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
@@ -231,7 +230,7 @@
             border:2px solid black;
             
         }
-        .div4{
+        #div4{
             margin: auto;
             display: flex;
             flex-direction: row;
@@ -243,7 +242,87 @@
         .div4 img{
             margin: 1vh;
         }
+        #div5{
+            width: 80vw;
+            margin: auto;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .rss form{
+            width: 40vw;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .rss form h1,h2{
+            color:white;
+            font-family: 'Teko', sans-serif;
+        }
+        .emailfield{
+            margin: auto;
+            margin-top:2vh;
+            margin-bottom:2vh;
+            width: 30vw;
+            height: 5vh;
+            border-radius: 10px;
+            border: none;
+            text-indent: 1em;
+        }
+        .submitemail{
+            margin: auto;
+            margin-top:2vh;
+            margin-bottom:2vh;
+            padding: 1vh 4vw 1vw 4vw;
+            text-align: center;
+            vertical-align: middle;
+            background-color: rgb(255, 136, 67);
+            border: none;
+            border-radius: 5px;
+            font-size: 2em;
+            font-family: 'Teko', sans-serif;
+        }
+        .map{
+            margin: auto;
+            width: 80vw;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .address{
+            text-align:justify;
+            margin: auto;
+            font-size: 2em;
+            color: white;
+            font-family: 'Teko', sans-serif;
+        }
     /*FOOTEr*/
+    footer{
+        background-color: rgb(36, 36, 36);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        color:white;
+        background-color: rgb(48, 48, 48);
+    }
+    .footer-list{;
+        width: 30vw;
+        text-align: center;        
+    }
+    .ee{
+        text-align: center;
+    }
 </style>
 </head>
 <body>
@@ -254,10 +333,10 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Collection</a></li>
+                <li><a href="#div3">About Us</a></li>
+                <li><a href="#div4">Collection</a></li>
                 <li><a href="#">Sale</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#div5">Contact</a></li>
             </ul>
         </nav>
         <div class="social-links">
@@ -306,7 +385,7 @@
                 </div>
               </div>
         </div>
-        <div class="div3">
+        <div id="div3">
             <div class="about-us">
                 <p>
                     &nbsp &nbsp &nbsp &nbsp &nbsp Our products conveys simplicity of style, direct 
@@ -320,33 +399,42 @@
                 <img src="jet.jpg">
             </div>
         </div>
-        <div class="div4">
+        <div id="div4">
             <img src="1.jpg" style="width: 30%;">
             <img src="2.jpg" style="width: 30%;">
             <img src="jet.jpg" style="width: 30%;">
             <img src="div1.jpg" style="width: 60%;">
         </div>
-        <div class="div5">
+        <div id="div5">
             <div class="rss">
-
+                <form>
+                    <h1>Subscribe to our Newsletter</h1>
+                    <h2>Receive updates instantly</h2>
+                    <input type="text" placeholder="Enter your Email" class="emailfield">
+                    <button type="submit" class="submitemail">Subscribe</button>
+                </form>
             </div>
             <div class="map">
-
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="860" height="450" id="gmap_canvas" src="https://maps.google.com/maps?q=Baguio,%20Session&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://yt2.org">youtube to mp3</a><br><style>.mapouter{position:relative;text-align:right;height:450px;width:860px;}</style><a href="https://www.embedgooglemap.net">how to add a google map to wordpress</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:450px;width:860px;}</style></div></div>
+                <div class="address">
+                    <address>📍 #5412, Teodora Alonzo,<br> Bonifacio St., Baguio City, Benguet</address>
+                    <p>☏ +63999-999-9999</p>
+                </div>
             </div>
-            <div class="address">
-
-            </div>
+            
         </div>
     </main>
     <footer>
         <div class="footer-list">
-
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Agreement</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
         </div>
-        <div class="social-footer">
-
-        </div>
-        <div class="copyright">
-           <p>Copyright 2021</p> 
+        <div class="ee">
+            <h1>Submitted by: Ballesteros, Donn Cyril R.</h1>
+            <p>Copyright 2021</p> 
         </div>
     </footer>
 </body>
